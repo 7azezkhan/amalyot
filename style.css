@@ -268,9 +268,9 @@ body {
         flex-direction: column;
     }
 }
-
+/* 
 @media screen and (max-width: 480px) {
     .banner_heading {
         font-size: 40px;
     }
-}
+} */
