@@ -1,0 +1,276 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+:root {
+    --primary-color: #f35f2f;
+    --description-color: #bdbdbd;
+    --text-color: #292830;
+    --button-radius: 5px;
+    --all-transition: 0.5s;
+}
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+}
+
+
+.container {
+    width: 100%;
+    max-width: 1340px;
+    margin: 0 auto;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
+    z-index: 15;
+}
+
+.header_logo_wrapper {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    cursor: pointer;
+}
+
+.header_logo {
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.header_list {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    list-style: none;
+}
+
+.list_item>a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 18px;
+}
+
+.header_btn {
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    transition: var(--all-transition);
+    cursor: pointer;
+    border-radius: var(--button-radius);
+    background-color: transparent;
+    padding: 12px 30px;
+}
+
+.header_btn:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.header_menu {
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    font-size: 40px;
+    display: none;
+}
+
+.banner {
+    display: flex;
+    align-items: center;
+    margin-top: 150px;
+    gap: 30px;
+    justify-content: space-between;
+}
+
+.banner_heading {
+    font-size: 90px;
+    line-height: 1.2;
+    color: var(--text-color);
+}
+
+.banner_description {
+    color: var(--description-color);
+    font-size: 22px;
+    margin: 30px 0;
+}
+
+.banner_demo_wrapper {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.banner_demo_btn {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    border: 1px solid transparent;
+    background-color: var(--primary-color);
+    color: white;
+    cursor: pointer;
+    border-radius: var(--button-radius);
+    padding: 20px 36px;
+    font-size: 20px;
+
+    transition: var(--all-transition);
+}
+
+.banner_demo_btn:hover {
+    background-color: transparent;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+}
+
+.banner_demo_text {
+    color: var(--description-color);
+    font-size: 20px;
+}
+
+.overview {
+    margin: 200px 0;
+}
+
+
+
+.overview_bottom_shadow,
+.overview_top_shadow {
+    width: 500px;
+    height: 500px;
+    background-color: rgba(255, 255, 255, 0.2);
+    position: absolute;
+    border-radius: 50%;
+}
+
+.overview_bottom_shadow {
+    left: -250px;
+    bottom: -50%;
+    transform: translateY(-50%);
+}
+
+
+.overview_background {
+    width: 100%;
+    height: 80vh;
+    background-color: var(--primary-color);
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.overview_background>img {
+    z-index: 10;
+}
+
+.overview_top_shadow {
+    right: -250px;
+    top: -50%;
+    transform: translateY(50%);
+}
+
+
+.overview_brands {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+@media screen and (max-width: 1500px) {
+    .container {
+        padding: 0 20px;
+    }
+
+    .banner_heading {
+        font-size: 70px;
+    }
+
+    .banner_demo_btn {
+        font-size: 18px;
+        padding: 18px 30px;
+    }
+}
+
+@media screen and (max-width: 1250px) {
+    .banner_heading {
+        font-size: 60px;
+    }
+
+    .banner_description {
+        font-size: 20px;
+    }
+
+    .banner_img>img {
+        width: 500px;
+        height: 500px;
+        object-fit: contain;
+    }
+}
+
+@media screen and (max-width: 1150px) {
+    .banner_img {
+        display: none;
+    }
+
+    .banner_text {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .container {
+        padding: 0 10px;
+    }
+
+    .header_list,
+    .header_btn {
+        display: none;
+    }
+
+    .header_menu {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 680px) {
+    .banner_heading {
+        font-size: 50px;
+    }
+
+    .banner_description {
+        font-size: 18px;
+    }
+
+    .banner_demo_wrapper {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .banner_heading {
+        font-size: 40px;
+    }
+}
